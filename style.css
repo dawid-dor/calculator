@@ -1,0 +1,120 @@
+
+
+.calculator{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+.calculator-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "display display display display"
+    "MR MC MPlus Back"
+    "Plus Minus Timez Divide"
+    "Seven Eight Nine Equals"
+    "Four Five Six Equals"
+    "One Two Three Equals"
+    "Comma Ziro Clear Equals";
+}
+
+.display{
+    grid-area: display;
+    text-align: center;
+    color: #fff;
+    padding: 0.8em 1em 0.8em 1em;
+}
+
+#display-value{
+    font-size: 1.3em;
+}
+
+#display-operator{
+    visibility: block;
+    color: #268BD2;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#display-second-value{
+    visibility: block;
+    font-size: 1.3em;
+}
+
+/* Buttons template area */
+
+.MR{
+    grid-area: MR;
+}
+
+.MC{
+    grid-area: MC;
+}
+
+.MPlus{
+    grid-area: MPlus;
+}
+
+.Back{
+    grid-area: Back;
+}
+
+.Plus{
+    grid-area: Plus;
+}
+
+.Minus{
+    grid-area: Minus;
+}
+
+.Timez{
+    grid-area: Timez;
+}
+
+.Divide{
+    grid-area: Divide;
+}
+
+.Seven{
+    grid-area: Seven;
+}
+
+.Eight{
+    grid-area: Eight;
+}
+
+.Nine{
+    grid-area: Nine;
+}
+
+.Equals{
+    grid-area: Equals;
+}
+
+.Four{
+    grid-area: Four;
+}
+
+.Five{
+    grid-area: Five;
+}
+
+.Six{
+    grid-area: Six;
+}
+
+@media (min-width: 600px) and (max-width: 2000px){
+    .calculator-content{
+        width: 350px;
+        height: 550px;
+    }
+
+    #display-value, #display-second-value{
+        font-size: 1.7em;
+    }
+}
